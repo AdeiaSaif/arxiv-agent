@@ -1,5 +1,5 @@
 import streamlit as st
-from dotenv import load_dotenv
+
 
 from langchain_community.retrievers import ArxivRetriever
 from langchain_core.prompts import ChatPromptTemplate
@@ -8,7 +8,9 @@ from langchain.agents import create_agent
 from langchain.tools import tool
 from langchain_core.messages import HumanMessage, AIMessage
 
-load_dotenv()
+import os
+
+api_key = st.secrets["MISTRAL_API_KEY"]
 
 
 # ---------------- TOOL ----------------
