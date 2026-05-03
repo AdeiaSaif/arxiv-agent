@@ -18,7 +18,7 @@ api_key = st.secrets["MISTRAL_API_KEY"]
 def research_papers(query: str) -> str:
     """Search arXiv papers based on query"""
 
-    llm = ChatMistralAI(model="mistral-small-latest")
+    llm = ChatMistralAI(model="mistral-small-latest",  api_key=api_key)
 
     prompt = ChatPromptTemplate.from_messages([
         ("system",
@@ -45,7 +45,7 @@ Return only keywords, no explanation."""),
 # ---------------- AGENT ----------------
 @st.cache_resource
 def get_agent():
-    llm = ChatMistralAI(model="mistral-small-latest")
+    llm = ChatMistralAI(model="mistral-small-latest", api_key=api_key)
 
     return create_agent(
         llm,
