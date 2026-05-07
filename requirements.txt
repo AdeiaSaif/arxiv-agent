@@ -5,3 +5,4 @@ langchain-mistralai
 arxiv
 python-dotenv
 rich
+tavily-python
