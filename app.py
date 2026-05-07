@@ -65,7 +65,7 @@ agent = get_agent()
 
 # ---------------- STREAMLIT UI ----------------
 st.set_page_config(page_title="ArXiv Research Agent.......", page_icon="📚")
-st.title("📚 ArXiv Research Assistant")
+st.title("📚 ArXiv Research Assistant...")
 
 if "history" not in st.session_state:
     st.session_state.history = []
